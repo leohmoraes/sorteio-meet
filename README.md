@@ -35,6 +35,51 @@ A ferramenta é ideal para sorteios em equipes de trabalho, eventos, promoções
 
 ---
 
+## 🚀 Como Executar o Projeto
+
+Este projeto utiliza [Vite](https://vitejs.dev/) como ferramenta de build e desenvolvimento.
+
+**Pré-requisitos:**
+- [Node.js](https://nodejs.org/) (versão 20.18.1 ou superior)
+- [npm](https://www.npmjs.com/) (geralmente instalado com o Node.js)
+
+**Passos:**
+
+1.  **Clone o repositório:**
+    ```bash
+    git clone <url-do-repositorio>
+    cd <diretorio-do-projeto>
+    ```
+
+2.  **Instale as dependências:**
+    ```bash
+    npm install
+    ```
+
+3.  **Inicie o servidor de desenvolvimento:**
+    ```bash
+    npm run dev
+    ```
+    A aplicação estará disponível em `http://localhost:5173` (ou outra porta indicada no terminal).
+
+4.  **Para gerar a versão de produção:**
+    ```bash
+    npm run build
+    ```
+    Os arquivos otimizados para produção serão gerados na pasta `dist/`.
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+-   **Build Tool**: [Vite](https://vitejs.dev/)
+-   **Frontend**: [React](https://react.dev/) (com TypeScript)
+-   **Estilização**: [Tailwind CSS](https://tailwindcss.com/)
+-   **Roteamento**: [React Router](https://reactrouter.com/)
+-   **Armazenamento**: [Web Storage API (localStorage)](https://developer.mozilla.org/pt-BR/docs/Web/API/Web_Storage_API)
+
+---
+
 ## 📝 Documento de Requisitos do Produto (PRD)
 
 ### 1. Visão Geral
@@ -88,12 +133,3 @@ O SorteioMeet visa fornecer uma solução de código aberto, gratuita e fácil d
 -   Exportar a lista de participantes e/ou vencedores para CSV.
 -   Autenticação para administradores para proteger os sorteios com senha.
 -   Suporte a um backend para sorteios persistentes entre diferentes dispositivos.
-
----
-
-## 🛠️ Tecnologias Utilizadas
-
--   **Frontend**: [React](https://react.dev/) (com TypeScript)
--   **Estilização**: [Tailwind CSS](https://tailwindcss.com/)
--   **Roteamento**: [React Router](https://reactrouter.com/)
--   **Armazenamento**: [Web Storage API (localStorage)](https://developer.mozilla.org/pt-BR/docs/Web/API/Web_Storage_API)
