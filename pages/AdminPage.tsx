@@ -1,4 +1,3 @@
-
 import React, { useState, useMemo } from 'react';
 import { useParams, Navigate } from 'react-router-dom';
 import { useLocalStorageEvents } from '../hooks/useLocalStorage';
@@ -45,7 +44,7 @@ const AdminPage: React.FC = () => {
   const drawWinners = (count: number) => {
     const eligible = nonWinnerParticipants;
     if (eligible.length === 0) {
-        alert("No participants available to draw from.");
+        alert("Não há participantes disponíveis para sortear.");
         return;
     }
 
@@ -65,32 +64,32 @@ const AdminPage: React.FC = () => {
     <div className="space-y-8">
       <div>
         <h1 className="text-4xl font-bold text-white mb-2">{event.title}</h1>
-        <p className="text-gray-400">Admin dashboard for your raffle.</p>
+        <p className="text-gray-400">Painel de administração para o seu sorteio.</p>
       </div>
       
       <Card>
-        <h3 className="font-bold text-lg mb-2">Shareable Join Link</h3>
+        <h3 className="font-bold text-lg mb-2">Link de Participação Compartilhável</h3>
         <div className="flex items-center space-x-2 bg-dark-900 p-3 rounded-md">
           <input type="text" readOnly value={joinUrl} className="flex-grow bg-transparent text-gray-300 outline-none"/>
           <button onClick={copyToClipboard} className="bg-primary text-white px-4 py-2 rounded-md hover:bg-primary-hover transition-colors text-sm flex items-center">
             <ClipboardIcon className="h-4 w-4 mr-2"/>
-            {copied ? 'Copied!' : 'Copy'}
+            {copied ? 'Copiado!' : 'Copiar'}
           </button>
         </div>
       </Card>
       
       <div className="grid md:grid-cols-2 gap-8">
-        <Card title="Controls" className="h-fit">
+        <Card title="Controles" className="h-fit">
           <div className="space-y-4">
             <div className="flex items-center justify-between">
-              <label htmlFor="registration-toggle" className="font-medium">Registration Open</label>
+              <label htmlFor="registration-toggle" className="font-medium">Inscrições Abertas</label>
               <label className="relative inline-flex items-center cursor-pointer">
                 <input type="checkbox" id="registration-toggle" className="sr-only peer" checked={event.isRegistrationOpen} onChange={e => updateEvent({ isRegistrationOpen: e.target.checked })} />
                 <div className="w-11 h-6 bg-dark-600 rounded-full peer peer-focus:ring-2 peer-focus:ring-primary peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
               </label>
             </div>
             <div className="flex items-center justify-between">
-              <label htmlFor="winner-count" className="font-medium">Initial Winners to Draw</label>
+              <label htmlFor="winner-count" className="font-medium">Ganhadores Iniciais a Sortear</label>
               <input 
                 id="winner-count" 
                 type="number"
@@ -101,12 +100,12 @@ const AdminPage: React.FC = () => {
               />
             </div>
              <button onClick={() => drawWinners(event.initialWinnerCount)} disabled={nonWinnerParticipants.length === 0} className="w-full bg-secondary text-white font-bold py-2 px-4 rounded-md hover:bg-green-600 transition-colors disabled:bg-dark-600 disabled:cursor-not-allowed">
-              Draw {event.initialWinnerCount} Winner(s)
+              Sortear {event.initialWinnerCount} Ganhador(es)
             </button>
           </div>
         </Card>
 
-        <Card title="Winners" icon={<TrophyIcon className="h-6 w-6" />}>
+        <Card title="Ganhadores" icon={<TrophyIcon className="h-6 w-6" />}>
           {event.winners.length > 0 ? (
             <div className="space-y-3">
               <ul className="space-y-3 max-h-96 overflow-y-auto pr-2">
@@ -116,26 +115,26 @@ const AdminPage: React.FC = () => {
                       <span className="text-sm font-bold text-amber-400 mr-3">#{index + 1}</span>
                       <span className="font-semibold">{winner.name}</span>
                     </div>
-                    <input type="text" placeholder="Add tag..." value={winner.tag || ''} onChange={e => handleTagChange(winner.id, e.target.value)} className="text-right text-sm bg-transparent border-b border-dark-600 focus:border-primary focus:outline-none w-24"/>
+                    <input type="text" placeholder="Adicionar tag..." value={winner.tag || ''} onChange={e => handleTagChange(winner.id, e.target.value)} className="text-right text-sm bg-transparent border-b border-dark-600 focus:border-primary focus:outline-none w-24"/>
                   </li>
                 ))}
               </ul>
               {nonWinnerParticipants.length > 0 && (
                 <button onClick={() => drawWinners(1)} className="w-full mt-4 bg-primary/20 border border-primary text-primary font-bold py-2 px-4 rounded-md hover:bg-primary/30 transition-colors flex items-center justify-center">
-                  <PlusIcon className="h-5 w-5 mr-2" /> Draw +1 More Winner
+                  <PlusIcon className="h-5 w-5 mr-2" /> Sortear +1 Ganhador
                 </button>
               )}
             </div>
           ) : (
-            <p className="text-gray-400">No winners drawn yet.</p>
+            <p className="text-gray-400">Nenhum ganhador sorteado ainda.</p>
           )}
         </Card>
       </div>
 
-      <Card title="Participants" icon={<UsersIcon className="h-6 w-6" />}>
+      <Card title="Participantes" icon={<UsersIcon className="h-6 w-6" />}>
         <div className="flex justify-between items-baseline mb-2">
             <p className="text-gray-400">Total: {event.participants.length}</p>
-            <p className="text-gray-400">Remaining to draw: {nonWinnerParticipants.length}</p>
+            <p className="text-gray-400">Restantes para sortear: {nonWinnerParticipants.length}</p>
         </div>
         {event.participants.length > 0 ? (
           <ul className="space-y-2 max-h-96 overflow-y-auto pr-2">
@@ -146,7 +145,7 @@ const AdminPage: React.FC = () => {
             ))}
           </ul>
         ) : (
-          <p className="text-gray-400">No participants have joined yet.</p>
+          <p className="text-gray-400">Nenhum participante entrou ainda.</p>
         )}
       </Card>
     </div>

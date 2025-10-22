@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useParams, Navigate } from 'react-router-dom';
 import { useLocalStorageEvents } from '../hooks/useLocalStorage';
@@ -20,7 +19,7 @@ const ParticipantPage: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!name.trim()) {
-      alert("Please enter your name.");
+      alert("Por favor, digite seu nome.");
       return;
     }
     
@@ -52,8 +51,8 @@ const ParticipantPage: React.FC = () => {
       <div className="max-w-md mx-auto text-center">
         <Card>
           <div className="p-6">
-            <h1 className="text-3xl font-bold text-secondary mb-4">You're in!</h1>
-            <p className="text-gray-300">Your name has been added to the raffle. Good luck!</p>
+            <h1 className="text-3xl font-bold text-secondary mb-4">Você está dentro!</h1>
+            <p className="text-gray-300">Seu nome foi adicionado ao sorteio. Boa sorte!</p>
           </div>
         </Card>
       </div>
@@ -65,8 +64,8 @@ const ParticipantPage: React.FC = () => {
       <div className="max-w-md mx-auto text-center">
         <Card>
           <div className="p-6">
-            <h1 className="text-3xl font-bold text-amber-500 mb-4">Registration Closed</h1>
-            <p className="text-gray-300">Sorry, registration for "{event.title}" is now closed.</p>
+            <h1 className="text-3xl font-bold text-amber-500 mb-4">Inscrições Encerradas</h1>
+            <p className="text-gray-300">Desculpe, as inscrições para "{event.title}" estão encerradas.</p>
           </div>
         </Card>
       </div>
@@ -78,21 +77,21 @@ const ParticipantPage: React.FC = () => {
       <Card>
         <div className="text-center mb-6">
           <h1 className="text-3xl font-bold text-white">{event.title}</h1>
-          <p className="text-gray-400">Enter your name to join the raffle.</p>
+          <p className="text-gray-400">Digite seu nome para participar do sorteio.</p>
         </div>
         <form onSubmit={handleSubmit} className="space-y-4">
           <input
             type="text"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            placeholder="Your Name"
+            placeholder="Seu Nome"
             className="w-full px-4 py-3 bg-dark-700 border border-dark-600 rounded-md text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary"
           />
           <button
             type="submit"
             className="w-full bg-primary text-white font-bold py-3 px-6 rounded-md hover:bg-primary-hover transition-colors duration-300"
           >
-            Join Raffle
+            Participar do Sorteio
           </button>
         </form>
       </Card>

@@ -1,5 +1,5 @@
 {
-  "name": "QuickRaffle - Private List Drawing",
-  "description": "An application for creating private events where users can join a list via a unique link. The administrator can then close registrations and draw one or more winners randomly from the list. Perfect for raffles, giveaways, and drawings.",
+  "name": "SorteioMeet - Sorteio de Nomes",
+  "description": "Uma aplicação para criar eventos privados onde usuários podem entrar em uma lista através de um link único. O administrador pode então fechar as inscrições e sortear um ou mais vencedores aleatoriamente da lista. Perfeito para sorteios e promoções.",
   "requestFramePermissions": []
 }

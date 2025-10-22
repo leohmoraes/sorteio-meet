@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useLocalStorageEvents } from '../hooks/useLocalStorage';
@@ -13,7 +12,7 @@ const HomePage: React.FC = () => {
 
   const createEvent = () => {
     if (!title.trim()) {
-        alert("Please enter a title for your raffle.");
+        alert("Por favor, insira um título para o seu sorteio.");
         return;
     }
     let newId = generateHash();
@@ -40,9 +39,9 @@ const HomePage: React.FC = () => {
 
   return (
     <div className="max-w-2xl mx-auto flex flex-col items-center text-center">
-      <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4">Create a Private Raffle</h1>
+      <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4">Crie um Sorteio Privado</h1>
       <p className="text-lg text-gray-400 mb-8">
-        Instantly set up a private list for your giveaway. Share the unique link and draw winners with a click.
+        Crie instantaneamente uma lista privada para seu sorteio. Compartilhe o link exclusivo e sorteie os vencedores com um clique.
       </p>
       <Card className="w-full">
         <div className="flex flex-col gap-4">
@@ -50,14 +49,14 @@ const HomePage: React.FC = () => {
                 type="text"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
-                placeholder="Enter Raffle Title (e.g., 'Weekly Team Lunch')"
+                placeholder="Digite o Título do Sorteio (ex: 'Almoço Semanal da Equipe')"
                 className="w-full px-4 py-3 bg-dark-700 border border-dark-600 rounded-md text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary"
             />
             <button
             onClick={createEvent}
             className="w-full bg-primary text-white font-bold py-3 px-6 rounded-md hover:bg-primary-hover transition-colors duration-300 text-lg shadow-lg"
             >
-            Create New Raffle
+            Criar Novo Sorteio
             </button>
         </div>
       </Card>
