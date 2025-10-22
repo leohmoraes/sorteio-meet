@@ -1,0 +1,5 @@
+{
+  "name": "QuickRaffle - Private List Drawing",
+  "description": "An application for creating private events where users can join a list via a unique link. The administrator can then close registrations and draw one or more winners randomly from the list. Perfect for raffles, giveaways, and drawings.",
+  "requestFramePermissions": []
+}
