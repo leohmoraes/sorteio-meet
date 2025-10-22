@@ -1,4 +1,3 @@
-
 # SorteioMeet - Sorteio de Nomes
 
 ## 📖 Descrição
@@ -15,6 +14,7 @@ A ferramenta é ideal para sorteios em equipes de trabalho, eventos, promoções
 - **Página de Inscrição**: Participantes podem se inscrever com seu nome através do link compartilhado.
 - **Validação de Nomes**: Impede o registro de nomes duplicados (ignorando maiúsculas/minúsculas e espaços).
 - **Painel do Administrador**: Controle total sobre o sorteio.
+  - **Compartilhamento Fácil com QR Code**: O painel do administrador exibe um QR Code do link de inscrição, ideal para compartilhamento rápido em apresentações ou eventos.
   - Abrir e fechar inscrições a qualquer momento.
   - Visualizar a lista completa de participantes e a contagem de inscritos.
   - Definir o número de ganhadores a serem sorteados.
@@ -31,7 +31,7 @@ A ferramenta é ideal para sorteios em equipes de trabalho, eventos, promoções
 
 | Tela Inicial | Painel do Administrador | Página de Inscrição |
 | :---: | :---: | :---: |
-| ![Tela Inicial](./screenshots/tela-inicial.png "Crie um novo sorteio com um título.") | ![Painel do Administrador](./screenshots/admin.png "Gerencie participantes, configurações e sorteie os vencedores.") | ![Página de Inscrição](./screenshots/user1.png "Participantes se inscrevem aqui.") |
+| ![Tela Inicial](./screenshots/tela-inicial.png "Crie um novo sorteio com um título.") | ![Painel do Administrador](./screenshots/admin.png "Gerencie participantes, compartilhe com link ou QR Code e sorteie os vencedores.") | ![Página de Inscrição](./screenshots/user1.png "Participantes se inscrevem aqui.") |
 
 ---
 
@@ -60,6 +60,7 @@ O SorteioMeet visa fornecer uma solução de código aberto, gratuita e fácil d
 
 #### Épico: Gestão do Sorteio (Visão do Administrador)
 -   **Como** um Administrador, **eu quero** ver um link de participação compartilhável e um botão para copiá-lo, **para que** eu possa convidar pessoas facilmente.
+-   **Como** um Administrador, **eu quero** ver um QR Code ao lado do link de participação, **para que** os participantes possam escanear com seus celulares e entrar no sorteio rapidamente, especialmente em eventos presenciais.
 -   **Como** um Administrador, **eu quero** um botão para abrir ou fechar as inscrições, **para que** eu tenha controle sobre quem e quando pode entrar no sorteio.
 -   **Como** um Administrador, **eu quero** visualizar a lista de todos os participantes inscritos e a contagem total, **para que** eu possa acompanhar o engajamento.
 -   **Como** um Administrador, **eu quero** definir quantos vencedores sortear de uma vez, **para que** eu possa adaptar o sorteio à quantidade de prêmios.
@@ -96,4 +97,3 @@ O SorteioMeet visa fornecer uma solução de código aberto, gratuita e fácil d
 -   **Estilização**: [Tailwind CSS](https://tailwindcss.com/)
 -   **Roteamento**: [React Router](https://reactrouter.com/)
 -   **Armazenamento**: [Web Storage API (localStorage)](https://developer.mozilla.org/pt-BR/docs/Web/API/Web_Storage_API)
-
