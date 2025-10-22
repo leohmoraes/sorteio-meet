@@ -18,14 +18,23 @@ const ParticipantPage: React.FC = () => {
   
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!name.trim()) {
+    const trimmedName = name.trim();
+
+    if (!trimmedName) {
       alert("Por favor, digite seu nome.");
       return;
+    }
+
+    const isDuplicate = event.participants.some(p => p.name.toLowerCase() === trimmedName.toLowerCase());
+
+    if (isDuplicate) {
+        alert("Este nome já está na lista. Por favor, use um nome ou sobrenome para se diferenciar.");
+        return;
     }
     
     const newParticipant: Participant = {
       id: `${Date.now()}-${Math.random()}`,
-      name: name.trim(),
+      name: trimmedName,
       timestamp: Date.now()
     };
     
