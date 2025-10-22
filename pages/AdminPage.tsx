@@ -68,13 +68,29 @@ const AdminPage: React.FC = () => {
       </div>
       
       <Card>
-        <h3 className="font-bold text-lg mb-2">Link de Participação Compartilhável</h3>
-        <div className="flex items-center space-x-2 bg-dark-900 p-3 rounded-md">
-          <input type="text" readOnly value={joinUrl} className="flex-grow bg-transparent text-gray-300 outline-none"/>
-          <button onClick={copyToClipboard} className="bg-primary text-white px-4 py-2 rounded-md hover:bg-primary-hover transition-colors text-sm flex items-center">
-            <ClipboardIcon className="h-4 w-4 mr-2"/>
-            {copied ? 'Copiado!' : 'Copiar'}
-          </button>
+        <h3 className="font-bold text-lg mb-4">Compartilhe para Inscrição</h3>
+        <div className="flex flex-col md:flex-row items-center gap-6">
+            <div className="flex-grow w-full">
+                <p className="text-sm font-medium text-gray-400 mb-2">Copie e compartilhe o link:</p>
+                <div className="flex items-center space-x-2 bg-dark-900 p-3 rounded-md">
+                    <input type="text" readOnly value={joinUrl} className="flex-grow bg-transparent text-gray-300 outline-none"/>
+                    <button onClick={copyToClipboard} className="bg-primary text-white px-4 py-2 rounded-md hover:bg-primary-hover transition-colors text-sm flex items-center shrink-0">
+                        <ClipboardIcon className="h-4 w-4 mr-2"/>
+                        {copied ? 'Copiado!' : 'Copiar'}
+                    </button>
+                </div>
+            </div>
+            <div className="text-center">
+                <p className="text-sm font-medium text-gray-400 mb-2">Ou escaneie o QR Code:</p>
+                <div className="bg-white p-2 rounded-md inline-block shadow-md">
+                    <img 
+                        src={`https://api.qrserver.com/v1/create-qr-code/?size=128x128&data=${encodeURIComponent(joinUrl)}&qzone=1`} 
+                        alt="QR Code do link de inscrição" 
+                        width="128" 
+                        height="128" 
+                    />
+                </div>
+            </div>
         </div>
       </Card>
       
