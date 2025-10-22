@@ -110,12 +110,19 @@ const AdminPage: React.FC = () => {
             <div className="space-y-3">
               <ul className="space-y-3 max-h-96 overflow-y-auto pr-2">
                 {event.winners.map((winner, index) => (
-                  <li key={winner.id} className="bg-dark-700 p-3 rounded-md flex items-center justify-between">
-                    <div className="flex items-center">
-                      <span className="text-sm font-bold text-amber-400 mr-3">#{index + 1}</span>
-                      <span className="font-semibold">{winner.name}</span>
+                  <li key={winner.id} className="bg-dark-700 p-3 rounded-md flex items-center justify-between gap-4">
+                    <div className="flex items-center overflow-hidden">
+                      <span className="text-sm font-bold text-amber-400 mr-3 shrink-0">#{index + 1}</span>
+                      <span className="font-semibold truncate" title={winner.name}>{winner.name}</span>
                     </div>
-                    <input type="text" placeholder="Adicionar tag..." value={winner.tag || ''} onChange={e => handleTagChange(winner.id, e.target.value)} className="text-right text-sm bg-transparent border-b border-dark-600 focus:border-primary focus:outline-none w-24"/>
+                    <input 
+                      type="text" 
+                      placeholder="Adicionar tag..." 
+                      value={winner.tag || ''} 
+                      onChange={e => handleTagChange(winner.id, e.target.value)} 
+                      aria-label={`Tag para ${winner.name}`}
+                      className="text-right text-sm bg-dark-600 rounded-md px-2 py-1 border border-dark-600 focus:border-primary focus:outline-none w-36 transition-colors"
+                    />
                   </li>
                 ))}
               </ul>
