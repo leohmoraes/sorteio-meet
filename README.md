@@ -1,8 +1,6 @@
 
 # SorteioMeet - Sorteio de Nomes
 
-![SorteioMeet](./placeholder.png "Tela da Aplicação SorteioMeet")
-
 ## 📖 Descrição
 
 SorteioMeet é uma aplicação web simples e intuitiva para criar e gerenciar sorteios privados. Com ela, um administrador pode gerar um link de participação exclusivo, que pode ser compartilhado para que outras pessoas se inscrevam. O administrador tem controle total sobre o evento, podendo abrir/fechar as inscrições, definir a quantidade de vencedores e sortear nomes de forma aleatória e justa, sem repetições.
@@ -33,7 +31,7 @@ A ferramenta é ideal para sorteios em equipes de trabalho, eventos, promoções
 
 | Tela Inicial | Painel do Administrador | Página de Inscrição |
 | :---: | :---: | :---: |
-| ![Tela Inicial](./placeholder.png "Crie um novo sorteio com um título.") | ![Painel do Administrador](./placeholder.png "Gerencie participantes, configurações e sorteie os vencedores.") | ![Página de Inscrição](./placeholder.png "Participantes se inscrevem aqui.") |
+| ![Tela Inicial](./screenshots/tela-inicial.png "Crie um novo sorteio com um título.") | ![Painel do Administrador](./screenshots/admin.png "Gerencie participantes, configurações e sorteie os vencedores.") | ![Página de Inscrição](./screenshots/user1.png "Participantes se inscrevem aqui.") |
 
 ---
 
