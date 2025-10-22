@@ -27,14 +27,6 @@ A ferramenta é ideal para sorteios em equipes de trabalho, eventos, promoções
 
 ---
 
-## 🖼️ Telas da Aplicação
-
-| Tela Inicial | Painel do Administrador | Página de Inscrição |
-| :---: | :---: | :---: |
-| ![Tela Inicial](./screenshots/tela-inicial.png "Crie um novo sorteio com um título.") | ![Painel do Administrador](./screenshots/admin.png "Gerencie participantes, compartilhe com link ou QR Code e sorteie os vencedores.") | ![Página de Inscrição](./screenshots/user1.png "Participantes se inscrevem aqui.") |
-
----
-
 ## 🚀 Como Executar o Projeto
 
 Este projeto utiliza [Vite](https://vitejs.dev/) como ferramenta de build e desenvolvimento.
